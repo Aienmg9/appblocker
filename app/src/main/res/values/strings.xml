@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Appblocker</string>
+    <string name="accessibility_service_description">Monitoruje aktywne aplikacje żeby blokować wybrane przez Ciebie.</string>
+
+    <string name="lock_screen_title">Dostęp zablokowany</string>
+    <string name="lock_screen_app_label">Aplikacja</string>
+    <string name="lock_screen_instruction">Ta aplikacja została zablokowana.\nUżyj karty w głównym panelu,\naby przywrócić dostęp.</string>
+    <string name="lock_screen_back_button">Wróć do ekranu głównego</string>
+
+    <string name="home_system_protection">System Ochrony</string>
+    <string name="status_off">OFF</string>
+    <string name="status_on">ON</string>
+    <string name="status_active">Aktywna</string>
+    <string name="status_disabled">Wyłączona</string>
+    <string name="home_toggle_hint">Kliknij kółko aby przełączyć</string>
+    <string name="focus_mode">Focus Mode</string>
+    <string name="auto_grayscale">Auto Grayscale</string>
+    <string name="home_today_stats">Dzisiaj aktywny: %s min</string>
+    <string name="home_lifetime_stats">Łączny czas ochrony: %s</string>
+
+    <string name="tab_apps">Aplikacje</string>
+    <string name="tab_groups">Grupy</string>
+    <string name="card_status_prefix">Karta: </string>
+    <string name="card_inactive">Nieaktywna</string>
+    <string name="card_none">Brak</string>
+    <string name="btn_change">Zmień</string>
+    <string name="btn_remove">Usuń</string>
+    <string name="hardcore_mode">Tryb HARDCORE</string>
+    <string name="app_count_suffix">apek</string>
+    <string name="search_hint">Szukaj...</string>
+    <string name="btn_new_group">+ Nowa Grupa</string>
+    <string name="overlay_unlock_msg">Odblokuj system</string>
+
+    <string name="websites_header">Strony WWW</string>
+    <string name="btn_add">+ Dodaj</string>
+
+    <string name="schedule_header">Harmonogram</string>
+
+    <string name="nav_status">Status</string>
+    <string name="nav_apps">Aplikacje</string>
+    <string name="nav_websites">Strony</string>
+    <string name="nav_schedules">Plany</string>
+
+    <string name="biometric_unlock_title">Odblokuj</string>
+    <string name="cancel">Anuluj</string>
+    <string name="patience_msg">Cierpliwości...</string>
+    <string name="toast_enable_accessibility">Włącz Accessibility!</string>
+    <string name="toast_tap_card">Przyłóż kartę!</string>
+    <string name="penalty_recidivism_msg">Kara: %1$d min + %2$d min za recydywę! Zostało: %3$d min</string>
+    <string name="penalty_cheating_msg">Kara za oszukiwanie: %1$d min! Zostało: %2$d min</string>
+    <string name="toast_card_added">Dodano</string>
+    <string name="toast_wrong_card">Zła karta!</string>
+    <string name="dialog_schedule_title">Plan</string>
+    <string name="all_apps">Wszystko</string>
+    <string name="dialog_website_title">WWW</string>
+    <string name="group_name_hint">Nazwa grupy</string>
+    <string name="daily_limit_hint">Limit dzienny (min)</string>
+    <string name="dialog_new_group_title">Nowa grupa</string>
+    <string name="toast_create_group">Stwórz grupę!</string>
+    <string name="stats_today_prefix">Dzisiaj: %d min</string>
+    <string name="stats_lifetime_prefix">Łącznie: %s</string>
+
+    <string name="action_type_label">Typ akcji:</string>
+    <string name="btn_enable_lock">Włącz blokadę</string>
+    <string name="btn_disable_lock">Wyłącz blokadę</string>
+    <string name="what_to_block_label">Co zablokować?</string>
+    <string name="hour_label">Godzina:</string>
+    <string name="days_of_week_label">Dni tygodnia:</string>
+    <string name="forced_time_label">Przymusowy czas (min):</string>
+
+    <string name="day_mon">Pn</string>
+    <string name="day_tue">Wt</string>
+    <string name="day_wed">Śr</string>
+    <string name="day_thu">Cz</string>
+    <string name="day_fri">Pt</string>
+    <string name="day_sat">So</string>
+    <string name="day_sun">Nd</string>
+
+    <string name="language">Język</string>
+    <string name="blocked_browser_overlay">Przeglądarka: %s</string>
+    <string name="schedule_action_start">START</string>
+    <string name="schedule_action_stop">STOP</string>
+    <string name="unknown_group">Nieznana grupa</string>
+    <string name="schedule_details_format">Cel: %1$s | Cool: %2$dm | Dni: %3$s</string>
+    <string name="group_limit_format">Limit: %d min</string>
+
+    <string name="enforce_title">Wykryto obejście zasad</string>
+    <string name="enforce_msg">Usługa Dostępności jest wyłączona. Aby kontynuować korzystanie z telefonu, musisz wrócić do zasad lub zablokować urządzenie.</string>
+    <string name="btn_fix_accessibility">Powrót do zasad (Włącz)</string>
+    <string name="btn_lock_now">Blokada fizyczna</string>
+    <string name="notification_channel_name">Strażnik Zasad</string>
+    <string name="notification_title">Wykryto obejście zasad!</string>
+    <string name="notification_text">Kliknij tutaj, aby wrócić do trybu ochrony.</string>
+    <string name="toast_no_admin">Brak uprawnień administratora!</string>
+</resources>

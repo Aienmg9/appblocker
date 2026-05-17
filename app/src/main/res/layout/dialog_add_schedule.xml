@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/action_type_label"
+        android:textColor="#FFFFFF" />
+
+    <RadioGroup
+        android:id="@+id/rgActionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton android:id="@+id/rbStart" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_enable_lock" android:textColor="#FFFFFF" android:checked="true"/>
+        <RadioButton android:id="@+id/rbEnd" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_disable_lock" android:textColor="#FFFFFF"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/what_to_block_label"
+        android:textColor="#FFFFFF" />
+
+    <Spinner
+        android:id="@+id/spGroupTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_card_modern"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hour_label"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnPickTime"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="08:00"
+        android:textColor="#BB86FC" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/days_of_week_label"
+        android:textColor="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <CheckBox android:id="@+id/cbMon" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/day_mon" android:textColor="#FFFFFF" android:checked="true" android:padding="0dp" android:textSize="12sp"/>
+        <CheckBox android:id="@+id/cbTue" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/day_tue" android:textColor="#FFFFFF" android:checked="true" android:padding="0dp" android:textSize="12sp"/>
+        <CheckBox android:id="@+id/cbWed" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/day_wed" android:textColor="#FFFFFF" android:checked="true" android:padding="0dp" android:textSize="12sp"/>
+        <CheckBox android:id="@+id/cbThu" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/day_thu" android:textColor="#FFFFFF" android:checked="true" android:padding="0dp" android:textSize="12sp"/>
+        <CheckBox android:id="@+id/cbFri" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/day_fri" android:textColor="#FFFFFF" android:checked="true" android:padding="0dp" android:textSize="12sp"/>
+        <CheckBox android:id="@+id/cbSat" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/day_sat" android:textColor="#FFFFFF" android:checked="true" android:padding="0dp" android:textSize="12sp"/>
+        <CheckBox android:id="@+id/cbSun" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/day_sun" android:textColor="#FFFFFF" android:checked="true" android:padding="0dp" android:textSize="12sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutStartOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/forced_time_label"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/etCooldown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="30"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</LinearLayout>

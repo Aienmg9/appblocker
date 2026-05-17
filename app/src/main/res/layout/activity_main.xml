@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Zakładka HOME -->
+        <ScrollView
+            android:id="@+id/layout_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="48dp">
+
+                <TextView
+                    android:id="@+id/tvStatusTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:text="@string/home_system_protection"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/btnToggleContainer"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="48dp"
+                    android:background="@drawable/bg_circle_toggle"
+                    android:elevation="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvStatusTitle">
+
+                    <TextView
+                        android:id="@+id/tvToggleLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/status_off"
+                        android:textColor="#FFFFFF"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvStatusSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/home_toggle_hint"
+                    android:textColor="#AAAAAA"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnToggleContainer" />
+
+                <LinearLayout
+                    android:id="@+id/layoutStatusControls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/bg_card_modern"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    app:layout_constraintTop_toBottomOf="@id/tvStatusSub">
+
+                    <Switch
+                        android:id="@+id/swFocusMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/focus_mode"
+                        android:textColor="#FFFFFF"
+                        android:thumbTint="#BB86FC" />
+
+                    <Switch
+                        android:id="@+id/swAutoGrayscale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/auto_grayscale"
+                        android:textColor="#FFFFFF"
+                        android:thumbTint="#BB86FC" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutStatusControls">
+
+                    <TextView
+                        android:id="@+id/tvHomeTodayStats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_today_stats"
+                        android:textColor="#BB86FC" />
+
+                    <TextView
+                        android:id="@+id/tvHomeLifetimeStats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_lifetime_stats"
+                        android:textColor="#888888"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/btnChangeLanguage"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/language"
+                        android:textColor="#AAAAAA" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <!-- Zakładka APPS & GROUPS -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_apps"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <RadioGroup
+                android:id="@+id/rgAppToggle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+                <RadioButton android:id="@+id/rbApps" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/tab_apps" android:textColor="#FFFFFF" android:checked="true"/>
+                <RadioButton android:id="@+id/rbGroups" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/tab_groups" android:textColor="#FFFFFF"/>
+            </RadioGroup>
+
+            <FrameLayout
+                android:id="@+id/container_apps_groups"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgAppToggle">
+
+                <LinearLayout
+                    android:id="@+id/view_apps"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/cardNfc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_card_modern"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+                        <TextView android:id="@+id/tvCardStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/card_inactive" android:textColor="#FFFFFF" android:textStyle="bold" />
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:orientation="horizontal">
+                            <Button android:id="@+id/btnAddCard" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/btn_change" />
+                            <Button android:id="@+id/btnRemoveCard" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/btn_remove" android:textColor="#CF6679" />
+                        </LinearLayout>
+                        <CheckBox android:id="@+id/cbHardcore" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/hardcore_mode" android:textColor="#CF6679" android:visibility="gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAppCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        android:text="0 apek"
+                        android:textColor="#AAAAAA"
+                        android:textSize="12sp" />
+
+                    <SearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/bg_card_modern"
+                        android:iconifiedByDefault="false"
+                        android:queryHint="@string/search_hint" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvApps"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_groups"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnAddGroup"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_new_group" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGroups"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/appsOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CC121212"
+                android:clickable="true"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tvOverlayMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/overlay_unlock_msg"
+                android:textColor="#BB86FC"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Zakładka WEBSITES -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_websites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:visibility="gone">
+            <TextView android:id="@+id/tvWebHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48dp" android:text="@string/websites_header" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <Button android:id="@+id/btnAddWebsite" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_add" app:layout_constraintBottom_toBottomOf="@id/tvWebHeader" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/tvWebHeader" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvWebsites" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="24dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tvWebHeader" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Zakładka SCHEDULES -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_schedules"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="24dp"
+            android:visibility="gone">
+            <TextView android:id="@+id/tvSchedHeader" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="48dp" android:text="@string/schedule_header" android:textColor="#FFFFFF" android:textSize="22sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+            <Button android:id="@+id/btnAddSchedule" style="@style/Widget.MaterialComponents.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_add" app:layout_constraintBottom_toBottomOf="@id/tvSchedHeader" android:textColor="#BB86FC" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="@id/tvSchedHeader" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvSchedules" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="24dp" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/tvSchedHeader" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#1E1E1E"
+        app:itemIconTint="#BB86FC"
+        app:itemTextColor="#BB86FC"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

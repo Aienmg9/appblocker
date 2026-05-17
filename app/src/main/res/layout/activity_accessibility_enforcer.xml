@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="32dp">
+
+    <ImageView
+        android:id="@+id/ivWarning"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="64dp"
+        android:src="@android:drawable/ic_dialog_alert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#CF6679" />
+
+    <TextView
+        android:id="@+id/tvEnforceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/enforce_title"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivWarning" />
+
+    <TextView
+        android:id="@+id/tvEnforceMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/enforce_msg"
+        android:textColor="#AAAAAA"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvEnforceTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFixAccessibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:padding="16dp"
+        android:text="@string/btn_fix_accessibility"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEnforceMsg" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLockNow"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:text="@string/btn_lock_now"
+        android:textColor="#CF6679"
+        app:cornerRadius="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnFixAccessibility"
+        app:strokeColor="#CF6679" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
