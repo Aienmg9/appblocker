@@ -1,1 +1,0 @@
-adb shell pm grant com.Aien.appblocker android.permission.WRITE_SECURE_SETTINGS
