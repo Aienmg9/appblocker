@@ -1,4 +1,4 @@
-# 🛡️ Appblocker - Twój Asystent Produktywności
+# 🛡️ Appblocker
 
 > ⚠️ **UWAGA / WARNING** ⚠️
 >
